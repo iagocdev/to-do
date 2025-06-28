@@ -1,0 +1,21 @@
+body { margin:0; font-family:sans-serif; background:#f7f7f7; display:flex; justify-content:center; padding-top:60px }
+.container { background:#fff; border-radius:12px; padding:30px; width:400px; box-shadow:0 10px 25px rgba(0,0,0,0.1) }
+h1 { text-align:center; color:#333 }
+.todo-form { display:flex; gap:10px; margin-bottom:20px }
+.todo-form input { flex:1; padding:10px; font-size:16px }
+.todo-form button { padding:10px; background:#4CAF50; color:#fff; border:none; cursor:pointer; border-radius:6px }
+ul#todo-list { list-style:none; padding:0 }
+.task { display:flex; flex-direction:column; background:#fafafa; margin-bottom:10px; border-radius:6px; border:1px solid #ddd; padding:10px; }
+.task span { cursor:pointer; font-size:16px; transition: color 0.3s ease; }
+.task.done span { text-decoration:line-through; color:#aaa; }
+.task.done span::before { content:"✔ "; color:green; font-weight:bold; margin-right:4px; }
+.task button { background:none; border:none; cursor:pointer; color:#666; margin-left:5px; }
+.task button:hover { color:#000; }
+.subtasks { margin-top:10px; padding-left:20px; border-left:2px solid #ddd }
+.subtask { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px }
+.subtask.done span { text-decoration:line-through; color:#bbb }
+.add-subtask { margin-top:8px; display:flex; gap:5px }
+.add-subtask input { flex:1; padding:6px; font-size:14px }
+.status-msg { margin-top:6px; font-size:13px; font-weight:bold; color:green; opacity:0; animation:fadeIn 0.4s ease-in forwards; }
+@keyframes fadeIn { to { opacity:1; } }
+li.task.done .subtasks { display:none; }
